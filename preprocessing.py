@@ -64,7 +64,7 @@ with open("labelbox_export.json", "r") as export_file:
         # plt.imshow(binary_img, cmap="gray")
         # plt.show()
 
-        training_data.append([resized_img, training_output_vertices])
+        training_data.append([binary_img, training_output_vertices])
 
 X = []
 Y = []
