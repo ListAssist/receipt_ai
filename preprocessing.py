@@ -30,8 +30,8 @@ def transformVertices(vertices, ratio):
     output_vertices = []
     # get coordinates for fixed size picture and squash them between 0 and 1
     for vertice in vertices:
-        output_vertices.append((vertice["x"] * ratio[0]) / RES_X)
-        output_vertices.append((vertice["y"] * ratio[1]) / RES_Y)
+        output_vertices.append(vertice["x"] * ratio[0])
+        output_vertices.append(vertice["y"] * ratio[1])
     return output_vertices
 
 
