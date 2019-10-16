@@ -5,8 +5,13 @@ import cv2
 import imutils
 import json
 import pickle
+from tabulate import tabulate
+from matplotlib import patches
 from skimage.filters import threshold_local
 from tqdm import tqdm
+
+# if true will print plots and information about preprocessing
+DEBUG = False
 
 # path to images of bills
 BILL_IMG_DIR = "bills"
@@ -14,8 +19,8 @@ FULL_PATH = os.path.join(os.getcwd(), BILL_IMG_DIR)
 
 # fixed resolution which is put into model
 # RATIO should be 4:3 since most mobile cams use this aspect ratio
-RES_Y = 400
-RES_X = 300
+RES_Y = 300
+RES_X = 400
 
 training_data = []
 
@@ -23,19 +28,26 @@ training_data = []
 # gets 4 vertices as dictionary with x and y properties
 def transformVertices(vertices, ratio):
     output_vertices = []
+    # get coordinates for fixed size picture and squash them between 0 and 1
     for vertice in vertices:
         output_vertices.append((vertice["x"] * ratio[0]) / RES_X)
         output_vertices.append((vertice["y"] * ratio[1]) / RES_Y)
     return output_vertices
 
+# load every picture as grayscale and create dictionary
 name_to_img = {}
 for img in tqdm(os.listdir(FULL_PATH)):
     name_to_img[img] = cv2.imread(os.path.join(FULL_PATH, img), cv2.IMREAD_GRAYSCALE)
 
+# open exported json and read labels
 with open("labelbox_export.json", "r") as export_file:
     data = json.load(export_file)
+
+    # remove skipped labels
     data = [label for label in data if label["Label"] != "Skip"]
     for label in data:
+        print(label["ID"])
+        # extra important data
         IMG_NAME = label["External ID"]
         IMPORTANT_VERTICES = label["Label"]["bill"][0]["geometry"]
         BILL_VERTICES = label["Label"]["bill"][0]["geometry"]
@@ -57,14 +69,23 @@ with open("labelbox_export.json", "r") as export_file:
         # https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html
         # binary_img = cv2 \
         #   .adaptiveThreshold(resized_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 17, 5)
-        threshold = threshold_local(resized_img, 11, offset=10, method="gaussian")
+        threshold = threshold_local(resized_img, 19, offset=10, method="gaussian")
         binary_img = resized_img > threshold
 
-        # print image in plot
-        # plt.imshow(binary_img, cmap="gray")
-        # plt.show()
+        if DEBUG:
+            def chunks(l, n):
+                # For item i in a range that is a length of l,
+                for i in range(0, len(l), n):
+                    # Create an index range for l of n items:
+                    yield l[i:i + n]
+            # print image in plot
+            plt.imshow(binary_img, cmap="gray")
+            polygon = patches.Polygon(list(chunks(training_output_vertices, 2)), linewidth=1, edgecolor="r",
+                                      facecolor="none")
+            plt.gca().add_patch(polygon)
+            plt.show()
 
-        training_data.append([resized_img, training_output_vertices])
+        training_data.append([binary_img, training_output_vertices])
 
 X = []
 Y = []
@@ -74,7 +95,12 @@ for x, y in training_data:
     X.append(x)
     Y.append(y)
 
+print(tabulate(training_data))
 X = np.array(X).reshape((-1, RES_X, RES_Y, 1))
+Y = np.array(Y)
+
+# normalize pixel values (gray scale!)
+X = X / 255
 
 pickle.dump(X, open("pickles/X.pickle", "wb"))
 pickle.dump(Y, open("pickles/Y.pickle", "wb"))
