@@ -16,7 +16,7 @@ Y = pickle.load(open("pickles/Y.pickle", "rb"))
 
 # Create model
 model = Sequential()
-model.add(Conv2D(64, kernel_size=(4, 4), input_shape=X.shape[1:], activation="relu"))
+model.add(Conv2D(128, kernel_size=(4, 4), input_shape=X.shape[1:], activation="relu"))
 model.add(MaxPooling2D(pool_size=(3, 3)))
 
 model.add(Conv2D(64, kernel_size=(3, 3), input_shape=X.shape[1:], activation="relu"))
@@ -24,17 +24,17 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 
-model.add(Dense(512, activation="relu"))
+model.add(Dense(256, activation="relu"))
 model.add(Dense(128, activation="relu"))
 
-model.add(Dense(8, activation="sigmoid"))
+model.add(Dense(8, activation="relu"))
 
 model.compile(loss="mean_squared_error", optimizer="adam", metrics=["accuracy"])
 model.summary()
 
 # run model with gpu
 with tf.device('/gpu:0'):
-    model.fit(X, Y, batch_size=5, epochs=1000, callbacks=[tensorboard], validation_split=.1)
+    model.fit(X, Y, batch_size=5, epochs=100, callbacks=[tensorboard])
     model.save(os.path.join("model", "main.h5"))
 
 # tensorboard --logdir=logs/

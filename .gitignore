@@ -1,3 +1,10 @@
+# ignore pycharm idea folder
 .idea
-bills
-model
+
+bills/*
+!bills/.gitkeep
+
+model/*
+!model/.gitkeep
+
+
