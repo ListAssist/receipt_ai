@@ -6,7 +6,7 @@ import numpy as np
 from matplotlib import patches
 from skimage.filters import threshold_local
 from tensorflow.keras.models import load_model
-from preprocessing import transformVertices, RES_X, RES_Y
+from preprocessing import RES_X, RES_Y
 from tqdm import tqdm
 
 # path to images of test bills
@@ -37,22 +37,19 @@ for img in tqdm(os.listdir(FULL_PATH)):
     binary_img = resized_img > threshold
 
     if DEBUG:
-        def chunks(l, n):
-            # For item i in a range that is a length of l,
-            for i in range(0, len(l), n):
-                # Create an index range for l of n items:
-                yield l[i:i + n]
         # print image in plot
         plt.imshow(binary_img, cmap="gray")
-        arr = np.array(binary_img).reshape((-1, RES_X, RES_Y, 1)) / 255
+        X = np.array(binary_img).reshape((-1, RES_X, RES_Y, 1)) / 255
 
-        coordinates = list(model.predict(arr))[0]
+        coordinates = list(model.predict(X))[0]
+        chunked_list = []
         for i in range(len(coordinates)):
             if i % 2 == 0:
                 coordinates[i] *= RES_X
             else:
                 coordinates[i] *= RES_Y
-        polygon_predicted = patches.Polygon(list(chunks(coordinates, 2)), linewidth=1, edgecolor="r",
+                chunked_list.append([coordinates[i - 1], coordinates[i]])
+        polygon_predicted = patches.Polygon(chunked_list, linewidth=1, edgecolor="r",
                                   facecolor="none")
         plt.gca().add_patch(polygon_predicted)
         plt.show()

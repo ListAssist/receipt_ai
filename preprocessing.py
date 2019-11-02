@@ -5,13 +5,17 @@ import cv2
 import imutils
 import json
 import pickle
+
+from scipy.spatial.qhull import ConvexHull
 from tabulate import tabulate
 from matplotlib import patches
-from skimage.filters import threshold_local
+from skimage.filters import threshold_local, threshold_otsu
+from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
 from tqdm import tqdm
 
+
 # if true will print plots and information about preprocessing
-DEBUG = False
+DEBUG = True
 
 # path to images of bills
 BILL_IMG_DIR = "bills"
@@ -19,24 +23,154 @@ FULL_PATH = os.path.join(os.getcwd(), BILL_IMG_DIR)
 
 # fixed resolution which is put into model
 # RATIO should be 4:3 since most mobile cams use this aspect ratio
-RES_Y = 600
-RES_X = 400
+RES_X = 600
+RES_Y = 900
 
 training_data = []
 
 
 # gets 4 vertices as dictionary with x and y properties
-def transformVertices(vertices, ratio):
+def transform_vertices(vertices, ratio):
     output_vertices = []
     # get coordinates for fixed size picture and squash them between 0 and 1
     for vertice in vertices:
-        output_vertices.append(vertice["x"] * ratio[0])
-        output_vertices.append(vertice["y"] * ratio[1])
+        output_vertices.append(vertice["x"] * ratio[0] / (1 if DEBUG else RES_X))
+        output_vertices.append(vertice["y"] * ratio[1] / (1 if DEBUG else RES_Y))
     return output_vertices
 
 
-if __name__ == "__main__":
+# distance between two points with pythagoras
+def calculate_distance(a, b):
+    return np.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2)
 
+
+def four_point_transform(points, image):
+    top_left = (points[0], points[1])
+    bottom_left = (points[2], points[3])
+    bottom_right =(points[4], points[5])
+    top_right = (points[6], points[7])
+
+    # Take largest width as final width of cutout image
+    width_top = calculate_distance(top_left, top_right)
+    width_bottom = calculate_distance(bottom_left, bottom_right)
+    max_width = int(max((width_top, width_bottom)))
+
+    height_left = calculate_distance(top_left, bottom_left)
+    height_right = calculate_distance(top_right, bottom_right)
+    max_height = int(max((height_left, height_right)))
+
+    dst = np.array([
+        [0, 0],
+        [0, max_height],
+        [max_width, max_height],
+        [max_width, 0]], dtype="float32")
+    M = cv2.getPerspectiveTransform(np.array((top_left, bottom_left, bottom_right, top_right), dtype="float32"), dst)
+    return cv2.warpPerspective(image, M, (max_width, max_height))
+
+
+# Get minimum bounding rect for a set of points (my quadliteral!)
+# Taken from https://gis.stackexchange.com/questions/22895/finding-minimum-area-rectangle-for-given-points/169633#169633
+def minimum_bounding_rectangle(points):
+    """
+    Find the smallest bounding rectangle for a set of points.
+    Returns a set of points representing the corners of the bounding box.
+
+    :param points: an nx2 matrix of coordinates
+    :rval: an nx2 matrix of coordinates
+    """
+    from scipy.ndimage.interpolation import rotate
+    pi2 = np.pi / 2.
+
+    # get the convex hull for the points
+    hull_points = points[ConvexHull(points).vertices]
+
+    # calculate edge angles
+    edges = np.zeros((len(hull_points) - 1, 2))
+    edges = hull_points[1:] - hull_points[:-1]
+
+    angles = np.zeros((len(edges)))
+    angles = np.arctan2(edges[:, 1], edges[:, 0])
+
+    angles = np.abs(np.mod(angles, pi2))
+    angles = np.unique(angles)
+
+    # find rotation matrices
+    # XXX both work
+    rotations = np.vstack([
+        np.cos(angles),
+        np.cos(angles - pi2),
+        np.cos(angles + pi2),
+        np.cos(angles)]).T
+    #     rotations = np.vstack([
+    #         np.cos(angles),
+    #         -np.sin(angles),
+    #         np.sin(angles),
+    #         np.cos(angles)]).T
+    rotations = rotations.reshape((-1, 2, 2))
+
+    # apply rotations to the hull
+    rot_points = np.dot(rotations, hull_points.T)
+
+    # find the bounding points
+    min_x = np.nanmin(rot_points[:, 0], axis=1)
+    max_x = np.nanmax(rot_points[:, 0], axis=1)
+    min_y = np.nanmin(rot_points[:, 1], axis=1)
+    max_y = np.nanmax(rot_points[:, 1], axis=1)
+
+    # find the box with the best area
+    areas = (max_x - min_x) * (max_y - min_y)
+    best_idx = np.argmin(areas)
+
+    # return the best box
+    x1 = max_x[best_idx]
+    x2 = min_x[best_idx]
+    y1 = max_y[best_idx]
+    y2 = min_y[best_idx]
+    r = rotations[best_idx]
+
+    rval = np.zeros((4, 2))
+    rval[0] = np.dot([x1, y2], r)
+    rval[1] = np.dot([x2, y2], r)
+    rval[2] = np.dot([x2, y1], r)
+    rval[3] = np.dot([x1, y1], r)
+
+    return rval
+
+
+# Algorithm to skew image correctly
+# Only works on well photographed pictures of receipts
+def skewAlgorithm(image):
+    # edge detection
+    sigma = 0.33
+    # get average grayscale value
+    median = np.median(image)
+    # create limit for aperture size (kernel size)
+    lower = int(max(0, (1.0 - sigma) * median))
+    upper = int(min(255, (1.0 + sigma) * median))
+
+    # blur image to focus on edges and shapes
+    img_blurred = cv2.GaussianBlur(image, (5, 5), 0)
+    # detect edges with the Canny86 Algorithm
+    img_blurred = cv2.Canny(img_blurred, lower, upper)
+    # cv2.imshow("Blurred img", img_blurred)
+    # cv2.waitKey(0)
+
+    # find contours
+    contours = cv2.findContours(img_blurred.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    contours = imutils.grab_contours(contours)
+    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
+
+    for contour in contours:
+        peri = cv2.arcLength(contour, True)
+        approximation = cv2.approxPolyDP(contour, 0.02 * peri, True)
+        if len(approximation) == 4:
+            cv2.drawContours(image, [approximation], -1, (0, 255, 0), 2)
+            cv2.imshow("Outline", image)
+            cv2.waitKey(0)
+            break
+
+
+if __name__ == "__main__":
     # load every picture as grayscale and create dictionary
     name_to_img = {}
     for img in tqdm(os.listdir(FULL_PATH)):
@@ -49,11 +183,10 @@ if __name__ == "__main__":
         # remove skipped labels
         data = [label for label in data if label["Label"] != "Skip"]
         for label in data:
-            print(label["ID"])
             # extra important data
             IMG_NAME = label["External ID"]
             IMPORTANT_VERTICES = label["Label"]["important"][0]["geometry"]
-            BILL_VERTICES = label["Label"]["bill"][0]["geometry"]
+            #BILL_VERTICES = label["Label"]["bill"][0]["geometry"]
 
             # read image pixels in 2d array as grayscale values
             img = name_to_img[IMG_NAME]
@@ -63,7 +196,7 @@ if __name__ == "__main__":
             RATIO_Y = RES_Y / img.shape[0]
 
             # transform labeled vertices to resized image
-            training_output_vertices = transformVertices(IMPORTANT_VERTICES, (RATIO_X, RATIO_Y))
+            training_output_vertices = transform_vertices(IMPORTANT_VERTICES, (RATIO_X, RATIO_Y))
 
             # resize image to fixed resolution
             resized_img = cv2.resize(img, (RES_X, RES_Y))
@@ -72,19 +205,22 @@ if __name__ == "__main__":
             # https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html
             # binary_img = cv2 \
             #   .adaptiveThreshold(resized_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 17, 5)
-            threshold = threshold_local(resized_img, 19, offset=10, method="gaussian")
+            threshold = threshold_otsu(cv2.GaussianBlur(resized_img, (5, 5), 0))
             binary_img = resized_img > threshold
 
+            # Show polygons (coordinates must not be squashed)
             if DEBUG:
                 def chunks(l, n):
                     # For item i in a range that is a length of l,
                     for i in range(0, len(l), n):
                         # Create an index range for l of n items:
                         yield l[i:i + n]
+
+                cv2.imshow("transformed", four_point_transform(training_output_vertices, resized_img))
                 # print image in plot
                 plt.imshow(binary_img, cmap="gray")
-                polygon = patches.Polygon(list(chunks(training_output_vertices, 2)), linewidth=1, edgecolor="r",
-                                          facecolor="none")
+                polygon = patches. \
+                    Polygon(list(chunks(training_output_vertices, 2)), linewidth=1, edgecolor="r", facecolor="none")
                 plt.gca().add_patch(polygon)
                 plt.show()
 
@@ -107,35 +243,3 @@ if __name__ == "__main__":
 
     pickle.dump(X, open("pickles/X.pickle", "wb"))
     pickle.dump(Y, open("pickles/Y.pickle", "wb"))
-
-    # Algorithm to skew image correctly
-    # Only works on well photographed pictures of receipts
-    def skewAlgorithm(image):
-        # edge detection
-        sigma = 0.33
-        # get average grayscale value
-        median = np.median(image)
-        # create limit for aperture size (kernel size)
-        lower = int(max(0, (1.0 - sigma) * median))
-        upper = int(min(255, (1.0 + sigma) * median))
-
-        # blur image to focus on edges and shapes
-        img_blurred = cv2.GaussianBlur(image, (5, 5), 0)
-        # detect edges with the Canny86 Algorithm
-        img_blurred = cv2.Canny(img_blurred, lower, upper)
-        # cv2.imshow("Blurred img", img_blurred)
-        # cv2.waitKey(0)
-
-        # find contours
-        contours = cv2.findContours(img_blurred.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-        contours = imutils.grab_contours(contours)
-        contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
-
-        for contour in contours:
-            peri = cv2.arcLength(contour, True)
-            approximation = cv2.approxPolyDP(contour, 0.02 * peri, True)
-            if len(approximation) == 4:
-                cv2.drawContours(image, [approximation], -1, (0, 255, 0), 2)
-                cv2.imshow("Outline", image)
-                cv2.waitKey(0)
-                break
