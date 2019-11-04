@@ -26,7 +26,7 @@ model.add(Flatten())
 
 model.add(Dense(64, activation="relu"))
 
-model.add(Dense(8, activation="relu"))
+model.add(Dense(8, activation="sigmoid"))
 
 model.compile(loss="mean_squared_error", optimizer="adam", metrics=["accuracy"])
 model.summary()
