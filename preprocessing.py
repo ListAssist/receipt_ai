@@ -132,10 +132,16 @@ if __name__ == "__main__":
             # resize image to fixed resolution
             resized_img = cv2.resize(img, (RES_X, RES_Y))
 
-            # create binary picture (just b&w)
-            # https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html
-            # binary_img = cv2 \
-            #   .adaptiveThreshold(resized_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 17, 5)
+            ''' create binary picture (just b&w)
+            https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html
+            binary_img = cv2 \
+                .adaptiveThreshold(resized_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 17, 5)
+            
+            Otsu threshold for multi background picture
+            Adaptive (mean, gaussian) for statistics over local threshold filter
+            
+            https://dsp.stackexchange.com/questions/2411/what-are-the-most-common-algorithms-for-adaptive-thresholding
+            '''
             threshold = threshold_otsu(cv2.GaussianBlur(resized_img, (5, 5), 0))
             binary_img = resized_img > threshold
 
@@ -149,7 +155,6 @@ if __name__ == "__main__":
 
                 cv2.imshow("transformed", four_point_transform(training_output_vertices, resized_img))
                 # print image in plot
-                plt.imshow(binary_img, cmap="gray")
                 polygon = patches. \
                     Polygon(list(chunks(training_output_vertices, 2)), linewidth=1, edgecolor="r", facecolor="none")
                 plt.gca().add_patch(polygon)
