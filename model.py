@@ -6,6 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.callbacks import TensorBoard
 import tensorflow as tf
 
+
 # create tensorboard for statistics
 NAME = f"bill_detection_cnn_{int(time.time())}"
 tensorboard = TensorBoard(log_dir=os.path.join("logs", NAME))
@@ -19,7 +20,7 @@ model = Sequential()
 model.add(Conv2D(128, kernel_size=(3, 3), input_shape=X.shape[1:], activation="relu"))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-model.add(Conv2D(64, kernel_size=(3, 3), input_shape=X.shape[1:], activation="relu"))
+model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())

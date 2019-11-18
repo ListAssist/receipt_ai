@@ -5,12 +5,9 @@ import cv2
 import imutils
 import json
 import pickle
-
-from scipy.spatial.qhull import ConvexHull
 from tabulate import tabulate
 from matplotlib import patches
-from skimage.filters import threshold_local, threshold_otsu
-from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
+from skimage.filters import threshold_otsu
 from tqdm import tqdm
 
 
