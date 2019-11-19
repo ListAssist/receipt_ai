@@ -144,18 +144,7 @@ if __name__ == "__main__":
 
             # Show polygons (coordinates must not be squashed)
             if DEBUG:
-                def chunks(l, n):
-                    # For item i in a range that is a length of l,
-                    for i in range(0, len(l), n):
-                        # Create an index range for l of n items:
-                        yield l[i:i + n]
-
                 cv2.imshow("transformed", four_point_transform(training_output_vertices, resized_img))
-                # print image in plot
-                polygon = patches. \
-                    Polygon(list(chunks(training_output_vertices, 2)), linewidth=1, edgecolor="r", facecolor="none")
-                plt.gca().add_patch(polygon)
-                plt.show()
 
             training_data.append([binary_img, training_output_vertices])
 
