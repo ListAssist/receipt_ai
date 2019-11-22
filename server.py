@@ -17,7 +17,7 @@ CORS(app)
 def main():
     # retrieve parameters (in this case coordinates) from request
     data = dict(request.form)
-    coordinates = json.loads(data["coordinates"][0])
+    coordinates = json.loads(data["coordinates"])
 
     # Decode image which was send from flutter with multipart form data
     img = cv2.imdecode(np.frombuffer(request.files["bill"].read(), np.uint8), cv2.IMREAD_COLOR)
@@ -34,7 +34,7 @@ def main():
     lines = pytesseract.image_to_data(gray_img, lang="deu", output_type=Output.DICT)
     boxes_and_text = []
 
-    # drawBoxes(lines, gray_img))
+    draw_boxes(lines, gray_img)
     return jsonify(tesseract_to_json(lines))
 
 
