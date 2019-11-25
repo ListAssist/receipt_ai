@@ -162,7 +162,7 @@ if __name__ == "__main__":
                 shear=(-16, 16),  # shear by -16 to +16 degrees
                 order=[0, 1],  # use nearest neighbour or bilinear interpolation (fast)
                 cval=(0, 255),  # if mode is constant, use a cval between 0 and 255
-                mode=ia.ALL  # use any of scikit-image's warping modes (see 2nd image from the top for examples)
+                mode=ia.ALL  # use any of scikit-image"s warping modes (see 2nd image from the top for examples)
             )),
             sometimes(iaa.PiecewiseAffine(scale=(0.01, 0.05))),  # sometimes move parts of the image around
             sometimes(iaa.PerspectiveTransform(scale=(0.01, 0.1)))
@@ -206,7 +206,7 @@ if __name__ == "__main__":
             RATIO_Y = RES_Y / raw_img.shape[0]
             img_vertices = transform_vertices(img_vertices, (RATIO_X, RATIO_Y))
 
-            ''' create binary picture (just b&w)
+            """ create binary picture (just b&w)
             https://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html
             binary_img = cv2 \
                 .adaptiveThreshold(resized_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 17, 5)
@@ -215,7 +215,7 @@ if __name__ == "__main__":
             Adaptive (mean, gaussian) for statistics over local threshold filter
             
             https://dsp.stackexchange.com/questions/2411/what-are-the-most-common-algorithms-for-adaptive-thresholding
-            '''
+            """
             ret, b_w_image = cv2.threshold(resized_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
             # Show polygons (coordinates must not be squashed)
