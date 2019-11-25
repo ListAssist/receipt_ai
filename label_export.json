@@ -1,5 +1,1712 @@
 [
   {
+    "ID": "ck1nyppf50ium0944kf2yceqb",
+    "DataRow ID": "ck1i04ao5nagp0cwbe67rgylm",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F5f6a6ccb-3abc-863d-6f01-7ac4d170acb1-20191008_172818.jpg?Expires=1572121244093&KeyName=labelbox-assets-key-1&Signature=iGdZ1bRwdvG0dWMIEJ0fSYe4f1M",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:13.000Z",
+    "Updated At": "2019-10-12T19:38:13.000Z",
+    "Seconds to Label": 13.349,
+    "External ID": "20191008_172818.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyppf50ium0944kf2yceqb"
+  },
+  {
+    "ID": "ck1nyq5t0ms740725mt8281er",
+    "DataRow ID": "ck1i04ao5nah10cwb76i78h2d",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F4e52dd04-a763-b469-b81f-877d3d63e39f-20191008_172743.jpg?Expires=1572121244093&KeyName=labelbox-assets-key-1&Signature=yC4uRDbqqImtzCesacUcVa70mNQ",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:34.000Z",
+    "Updated At": "2019-10-12T19:38:34.000Z",
+    "Seconds to Label": 17.887,
+    "External ID": "20191008_172743.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyq5t0ms740725mt8281er"
+  },
+  {
+    "ID": "ck1nyq9kbs71j0748gou4phgs",
+    "DataRow ID": "ck1i04ao5nagt0cwb8gdx4027",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F6fab5ef4-2112-0476-6889-befacfcbe5b6-20191008_172648.jpg?Expires=1572121244093&KeyName=labelbox-assets-key-1&Signature=zjtusSv2RZnxxREOGsPLYdhwmDA",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:39.000Z",
+    "Updated At": "2019-10-12T19:38:39.000Z",
+    "Seconds to Label": 4.59,
+    "External ID": "20191008_172648.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyq9kbs71j0748gou4phgs"
+  },
+  {
+    "ID": "ck1nyqc7fms8y07259eiidj05",
+    "DataRow ID": "ck1i04ao5nah50cwb1x0iaaws",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F67ad09fd-ba13-3c3d-8ad2-7dec8050f753-20191008_172757.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=XtQsUlrKITpqOkn8nxPVWnJ6I7w",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:42.000Z",
+    "Updated At": "2019-10-12T19:38:42.000Z",
+    "Seconds to Label": 3.132,
+    "External ID": "20191008_172757.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyqc7fms8y07259eiidj05"
+  },
+  {
+    "ID": "ck1nyqei0s733074874r4q41s",
+    "DataRow ID": "ck1i04ao5nagx0cwbd2r62fal",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fc0219d2f-2ae9-7ecf-e81a-93dca8e9b9fc-20191008_172718.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=WeUncx6BPTGGQfWijlpbN-d8FI8",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:45.000Z",
+    "Updated At": "2019-10-12T19:38:45.000Z",
+    "Seconds to Label": 2.568,
+    "External ID": "20191008_172718.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyqei0s733074874r4q41s"
+  },
+  {
+    "ID": "ck1nyql1zf9sg0811aohs52bf",
+    "DataRow ID": "ck1i04ao5nah90cwbclz1gg06",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F099b3f68-c65c-21e5-b821-2a85158bbee9-20191008_172813.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=mnqNVFNF9qdZ4MM5PfkLnFseU1E",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:38:54.000Z",
+    "Updated At": "2019-10-12T19:38:54.000Z",
+    "Seconds to Label": 8.094,
+    "External ID": "20191008_172813.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyql1zf9sg0811aohs52bf"
+  },
+  {
+    "ID": "ck1nysaiauiki0794uc546xv7",
+    "DataRow ID": "ck1lsoasomvqo0er041zebfhw",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F12e1477a-34ac-d5f6-edb1-6bdfb0d7fc58-IMG_20191010_125817.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=E5Xf8R8ebSZJ0U-FQJHgJ-volMM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 669,
+              "y": 1395
+            },
+            {
+              "x": 667,
+              "y": 1509
+            },
+            {
+              "x": 2092,
+              "y": 1522
+            },
+            {
+              "x": 2094,
+              "y": 1417
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 320,
+              "y": 153
+            },
+            {
+              "x": 453,
+              "y": 3447
+            },
+            {
+              "x": 2277,
+              "y": 3503
+            },
+            {
+              "x": 2486,
+              "y": 146
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:40:13.000Z",
+    "Updated At": "2019-10-12T19:40:13.000Z",
+    "Seconds to Label": 78.907,
+    "External ID": "IMG_20191010_125817.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nysaiauiki0794uc546xv7"
+  },
+  {
+    "ID": "ck1nysft7uiln0794h1nx0qgy",
+    "DataRow ID": "ck1lul632mvsw0er02shi8hma",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F06f8ec6e-4b50-3a59-843e-37d801c24805-20191011_100400.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=ezp57qwtXEQLc9Pmgx5O_tfqdeU",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:40:20.000Z",
+    "Updated At": "2019-10-12T19:40:20.000Z",
+    "Seconds to Label": 6.438,
+    "External ID": "20191011_100400.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nysft7uiln0794h1nx0qgy"
+  },
+  {
+    "ID": "ck1nyt7ahuint0794x02bk7hx",
+    "DataRow ID": "ck1luw037mvwg0er09e7sdxyb",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Ffc92aff4-b8c5-dddd-8105-01eeb158bfe4-20191011_100400.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=auPteaLtiCzpTYJtjpsmTe8Xayk",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 547,
+              "y": 1220
+            },
+            {
+              "x": 542,
+              "y": 1338
+            },
+            {
+              "x": 2270,
+              "y": 1340
+            },
+            {
+              "x": 2270,
+              "y": 1235
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 390,
+              "y": 508
+            },
+            {
+              "x": 320,
+              "y": 4032
+            },
+            {
+              "x": 2451,
+              "y": 4032
+            },
+            {
+              "x": 2458,
+              "y": 501
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:40:56.000Z",
+    "Updated At": "2019-10-12T19:40:56.000Z",
+    "Seconds to Label": 35.219,
+    "External ID": "20191011_100400.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyt7ahuint0794x02bk7hx"
+  },
+  {
+    "ID": "ck1nyviwx36a60757yfl2w77w",
+    "DataRow ID": "ck1lux6npmvwo0er0aexuf46f",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fab138e1f-cd70-5ff4-3331-afea463b7dce-20191011_100400.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=PdQtazEg8JaXhzIBxE85cuwvWJA",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 560,
+              "y": 1230
+            },
+            {
+              "x": 560,
+              "y": 1324
+            },
+            {
+              "x": 2257,
+              "y": 1341
+            },
+            {
+              "x": 2261,
+              "y": 1237
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 386,
+              "y": 510
+            },
+            {
+              "x": 326,
+              "y": 4026
+            },
+            {
+              "x": 2478,
+              "y": 4032
+            },
+            {
+              "x": 2444,
+              "y": 510
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:42:44.000Z",
+    "Updated At": "2019-10-12T19:42:44.000Z",
+    "Seconds to Label": 107.955,
+    "External ID": "20191011_100400.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nyviwx36a60757yfl2w77w"
+  },
+  {
+    "ID": "ck1nz966xukid0794fw98ylbm",
+    "DataRow ID": "ck1nsqvxit6l60er067fvecpx",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F199d76fa-6757-16ae-b8f8-cb4d89cf31b2-20191012_180313.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=p68TXsSUntDxxseRguQG1pd8gAU",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 858,
+              "y": 1332
+            },
+            {
+              "x": 854,
+              "y": 1735
+            },
+            {
+              "x": 2074,
+              "y": 1711
+            },
+            {
+              "x": 2055,
+              "y": 1316
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 683,
+              "y": 125
+            },
+            {
+              "x": 766,
+              "y": 4018
+            },
+            {
+              "x": 2222,
+              "y": 4018
+            },
+            {
+              "x": 2096,
+              "y": 111
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:53:21.000Z",
+    "Updated At": "2019-10-12T19:53:21.000Z",
+    "Seconds to Label": 635.889,
+    "External ID": "20191012_180313.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nz966xukid0794fw98ylbm"
+  },
+  {
+    "ID": "ck1nzapyh0l9m0944n1bnril6",
+    "DataRow ID": "ck1nsqvxit6li0er08mx2elvd",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F0325b4fc-ae8b-4d88-6f62-4e2f9b908f1f-20191012_180326.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=fL_2NEV_R4nB6fHcK5ztbBFjK6A",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 504,
+              "y": 1342
+            },
+            {
+              "x": 589,
+              "y": 1747
+            },
+            {
+              "x": 1993,
+              "y": 1260
+            },
+            {
+              "x": 1840,
+              "y": 943
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 149,
+              "y": 776
+            },
+            {
+              "x": 1067,
+              "y": 3866
+            },
+            {
+              "x": 2747,
+              "y": 3381
+            },
+            {
+              "x": 1776,
+              "y": 351
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:54:33.000Z",
+    "Updated At": "2019-10-12T19:54:33.000Z",
+    "Seconds to Label": 71.527,
+    "External ID": "20191012_180326.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzapyh0l9m0944n1bnril6"
+  },
+  {
+    "ID": "ck1nzboxefc9d0811ioleai91",
+    "DataRow ID": "ck1nsqvxjt6lu0er061zcax3t",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F37595ce6-dfa6-d382-7b42-9671edcad4d0-20191012_180337.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=QyPXtlij1KtKdpfHjGOMpzZnguc",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1166,
+              "y": 1151
+            },
+            {
+              "x": 418,
+              "y": 2487
+            },
+            {
+              "x": 1440,
+              "y": 2975
+            },
+            {
+              "x": 2129,
+              "y": 1676
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1407,
+              "y": 571
+            },
+            {
+              "x": 0,
+              "y": 3043
+            },
+            {
+              "x": 926,
+              "y": 4032
+            },
+            {
+              "x": 2431,
+              "y": 1142
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:55:18.000Z",
+    "Updated At": "2019-10-12T19:55:18.000Z",
+    "Seconds to Label": 44.877,
+    "External ID": "20191012_180337.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzboxefc9d0811ioleai91"
+  },
+  {
+    "ID": "ck1nzcuhcs9ka0748e683rma1",
+    "DataRow ID": "ck1nsqvxjt6m60er057gw41a9",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fdffc7913-e31b-d00c-005b-fa4958a12c99-20191012_180353.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=AXZgEHZzzVgHeszOWGNf-MBj8Oc",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 810,
+              "y": 1496
+            },
+            {
+              "x": 804,
+              "y": 1644
+            },
+            {
+              "x": 2124,
+              "y": 1562
+            },
+            {
+              "x": 2122,
+              "y": 1425
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 620,
+              "y": 412
+            },
+            {
+              "x": 620,
+              "y": 3416
+            },
+            {
+              "x": 2392,
+              "y": 3320
+            },
+            {
+              "x": 2288,
+              "y": 472
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:56:12.000Z",
+    "Updated At": "2019-10-12T19:56:12.000Z",
+    "Seconds to Label": 53.337,
+    "External ID": "20191012_180353.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzcuhcs9ka0748e683rma1"
+  },
+  {
+    "ID": "ck1nzdanpul3307947m7e00sr",
+    "DataRow ID": "ck1nsqvxkt6mi0er099rqhlzq",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F10f306bb-e6cc-5184-eca7-9d33259554c3-20191012_180405.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=mrhSNnCJHdhEBgYdOtyDZAwLg08",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1089,
+              "y": 1295
+            },
+            {
+              "x": 1093,
+              "y": 1872
+            },
+            {
+              "x": 1865,
+              "y": 1847
+            },
+            {
+              "x": 1826,
+              "y": 1259
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1052,
+              "y": 336
+            },
+            {
+              "x": 1060,
+              "y": 3837
+            },
+            {
+              "x": 2015,
+              "y": 3725
+            },
+            {
+              "x": 1896,
+              "y": 440
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:56:33.000Z",
+    "Updated At": "2019-10-12T19:56:33.000Z",
+    "Seconds to Label": 20.479,
+    "External ID": "20191012_180405.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzdanpul3307947m7e00sr"
+  },
+  {
+    "ID": "ck1nze506vry30838ysp2m1gj",
+    "DataRow ID": "ck1nsqvxkt6mu0er0hsh59n55",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fab7c819c-b52b-cbf2-613f-1552757141b5-20191012_180132.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=oHcuozLjsp9ardr0aItuj4Auekc",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 574,
+              "y": 1339
+            },
+            {
+              "x": 960,
+              "y": 1975
+            },
+            {
+              "x": 1849,
+              "y": 1443
+            },
+            {
+              "x": 1456,
+              "y": 815
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 322,
+              "y": 1004
+            },
+            {
+              "x": 1878,
+              "y": 3626
+            },
+            {
+              "x": 2875,
+              "y": 3018
+            },
+            {
+              "x": 1231,
+              "y": 409
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:57:13.000Z",
+    "Updated At": "2019-10-12T19:57:13.000Z",
+    "Seconds to Label": 38.89,
+    "External ID": "20191012_180132.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nze506vry30838ysp2m1gj"
+  },
+  {
+    "ID": "ck1nzeapdvrzb0838rav6v097",
+    "DataRow ID": "ck1nsqvxkt6n60er0ftmvh7gk",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F62bdacc3-908b-3e36-af29-fa577d8a2557-20191012_180147.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=2v4-TFhiKI7I6-M-STbjotHFrRU",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:57:20.000Z",
+    "Updated At": "2019-10-12T19:57:20.000Z",
+    "Seconds to Label": 6.945,
+    "External ID": "20191012_180147.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzeapdvrzb0838rav6v097"
+  },
+  {
+    "ID": "ck1nzf50b1pnt0721y6jaqja3",
+    "DataRow ID": "ck1nsqvxlt6ni0er02c4yb79h",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F6ca4eecc-411e-bd0a-888f-3dc0c459ddd4-20191012_180158.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=mmA76-ZSOxHd9Qs0jbxvCOBQcv4",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 633,
+              "y": 997
+            },
+            {
+              "x": 647,
+              "y": 1556
+            },
+            {
+              "x": 2469,
+              "y": 1439
+            },
+            {
+              "x": 2408,
+              "y": 926
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 552,
+              "y": 321
+            },
+            {
+              "x": 634,
+              "y": 4031
+            },
+            {
+              "x": 2710,
+              "y": 4031
+            },
+            {
+              "x": 2351,
+              "y": 216
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:57:59.000Z",
+    "Updated At": "2019-10-12T19:57:59.000Z",
+    "Seconds to Label": 37.947,
+    "External ID": "20191012_180158.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzf50b1pnt0721y6jaqja3"
+  },
+  {
+    "ID": "ck1nzftu11pps07217n4yarfm",
+    "DataRow ID": "ck1nsqvxht6ka0er09msm6tcj",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F86a434dc-33b5-2810-5fe9-0dad3f83cd2c-20191012_180227.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=KRPAYegfkRDocfrwlq-jhKqUemE",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 877,
+              "y": 1628
+            },
+            {
+              "x": 790,
+              "y": 2638
+            },
+            {
+              "x": 1943,
+              "y": 2674
+            },
+            {
+              "x": 1904,
+              "y": 1654
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 891,
+              "y": 625
+            },
+            {
+              "x": 685,
+              "y": 4032
+            },
+            {
+              "x": 1990,
+              "y": 4023
+            },
+            {
+              "x": 2063,
+              "y": 709
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:58:31.000Z",
+    "Updated At": "2019-10-12T19:58:31.000Z",
+    "Seconds to Label": 31.659,
+    "External ID": "20191012_180227.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzftu11pps07217n4yarfm"
+  },
+  {
+    "ID": "ck1nzh2q5ulgg0794s9svtejy",
+    "DataRow ID": "ck1nsqvxlt6nu0er074wz6q4d",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Febf1ee52-c8fe-0c52-3923-a19c1238be53-20191012_180212.jpg?Expires=1572121244094&KeyName=labelbox-assets-key-1&Signature=pedyvi5TgAs3mNXUoUjxLDKJvXo",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 484,
+              "y": 1316
+            },
+            {
+              "x": 1459,
+              "y": 3330
+            },
+            {
+              "x": 2495,
+              "y": 2791
+            },
+            {
+              "x": 1456,
+              "y": 858
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 0,
+              "y": 366
+            },
+            {
+              "x": 1724,
+              "y": 4032
+            },
+            {
+              "x": 3023,
+              "y": 3605
+            },
+            {
+              "x": 1090,
+              "y": 7
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T19:59:30.000Z",
+    "Updated At": "2019-10-12T19:59:30.000Z",
+    "Seconds to Label": 57.715,
+    "External ID": "20191012_180212.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzh2q5ulgg0794s9svtejy"
+  },
+  {
+    "ID": "ck1nzhsi8fd430811qse464w7",
+    "DataRow ID": "ck1nsqvxht6km0er04gkt5u7c",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fb41b3ad1-44ac-5e77-7e50-30eb0173ea48-20191012_180249.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=QX57kJIEcFpT5c_vf1s7OHX3xCA",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 819,
+              "y": 1670
+            },
+            {
+              "x": 806,
+              "y": 1809
+            },
+            {
+              "x": 2193,
+              "y": 1899
+            },
+            {
+              "x": 2199,
+              "y": 1766
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 766,
+              "y": 418
+            },
+            {
+              "x": 488,
+              "y": 4032
+            },
+            {
+              "x": 2138,
+              "y": 4032
+            },
+            {
+              "x": 2368,
+              "y": 557
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:00:03.000Z",
+    "Updated At": "2019-10-12T20:00:03.000Z",
+    "Seconds to Label": 32.98,
+    "External ID": "20191012_180249.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzhsi8fd430811qse464w7"
+  },
+  {
+    "ID": "ck1nzjc7qulpf0794lo14fnfy",
+    "DataRow ID": "ck1nsqvxit6ky0er04e9q2wu9",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F0c7681ad-8401-3e78-6b18-a109e44ed0d1-20191012_180257.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=8Abs5NjP0uJQSVFx2-fJ6dArfjo",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1047,
+              "y": 1304
+            },
+            {
+              "x": 1051,
+              "y": 1533
+            },
+            {
+              "x": 1867,
+              "y": 1530
+            },
+            {
+              "x": 1857,
+              "y": 1301
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1014,
+              "y": 552
+            },
+            {
+              "x": 975,
+              "y": 3613
+            },
+            {
+              "x": 1930,
+              "y": 3645
+            },
+            {
+              "x": 1936,
+              "y": 565
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:01:15.000Z",
+    "Updated At": "2019-10-12T20:01:15.000Z",
+    "Seconds to Label": 65.4,
+    "External ID": "20191012_180257.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzjc7qulpf0794lo14fnfy"
+  },
+  {
+    "ID": "ck1nzk90l394u07579bdhi2xn",
+    "DataRow ID": "ck1nsqvxit6la0er09s9bchk1",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F04c23ec8-cda9-00b2-5c42-6677fc485d52-20191012_180314.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=CO74pifemyD1m1UgE0RlDr7YDnw",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 664,
+              "y": 1808
+            },
+            {
+              "x": 790,
+              "y": 2161
+            },
+            {
+              "x": 1861,
+              "y": 1726
+            },
+            {
+              "x": 1689,
+              "y": 1378
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 106,
+              "y": 823
+            },
+            {
+              "x": 1462,
+              "y": 4032
+            },
+            {
+              "x": 2887,
+              "y": 4032
+            },
+            {
+              "x": 1293,
+              "y": 364
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:01:58.000Z",
+    "Updated At": "2019-10-12T20:01:58.000Z",
+    "Seconds to Label": 41.824,
+    "External ID": "20191012_180314.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzk90l394u07579bdhi2xn"
+  },
+  {
+    "ID": "ck1nzkzwm0mkx0944m6z98wiq",
+    "DataRow ID": "ck1nsqvxjt6lm0er03ia2atdc",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fb0ffc6c3-99a5-8406-ec11-2e30a999274f-20191012_180334.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=V2hx4sx__DyrJl1WL03ek0qgtxM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 922,
+              "y": 699
+            },
+            {
+              "x": 986,
+              "y": 1863
+            },
+            {
+              "x": 1841,
+              "y": 1807
+            },
+            {
+              "x": 1756,
+              "y": 680
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 862,
+              "y": 197
+            },
+            {
+              "x": 971,
+              "y": 4032
+            },
+            {
+              "x": 1946,
+              "y": 4029
+            },
+            {
+              "x": 1758,
+              "y": 195
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:02:33.000Z",
+    "Updated At": "2019-10-12T20:02:33.000Z",
+    "Seconds to Label": 34.365,
+    "External ID": "20191012_180334.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzkzwm0mkx0944m6z98wiq"
+  },
+  {
+    "ID": "ck1nzlpo1mvy507252rlz3dvf",
+    "DataRow ID": "ck1nsqvxjt6ly0er0f0iyd4gi",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F1e09b12e-0c78-74bd-19da-1500b1d9ad53-20191012_180344.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=epUXvBMVdLAslMgu2cSydQUp2bo",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 714,
+              "y": 1421
+            },
+            {
+              "x": 721,
+              "y": 1652
+            },
+            {
+              "x": 1837,
+              "y": 1665
+            },
+            {
+              "x": 1834,
+              "y": 1426
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 556,
+              "y": 409
+            },
+            {
+              "x": 501,
+              "y": 3262
+            },
+            {
+              "x": 1888,
+              "y": 3299
+            },
+            {
+              "x": 2063,
+              "y": 450
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:03:06.000Z",
+    "Updated At": "2019-10-12T20:03:06.000Z",
+    "Seconds to Label": 32.819,
+    "External ID": "20191012_180344.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzlpo1mvy507252rlz3dvf"
+  },
+  {
+    "ID": "ck1nzn6sc1ql00721jdcmnham",
+    "DataRow ID": "ck1nsqvxjt6ma0er0glwe1z80",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fcc5017fc-d830-94d7-afaf-b1307d4df6b3-20191012_180355.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=y7ND6yWSO55t93rs_h1ppNOJFho",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 765,
+              "y": 1696
+            },
+            {
+              "x": 851,
+              "y": 1810
+            },
+            {
+              "x": 1773,
+              "y": 1031
+            },
+            {
+              "x": 1687,
+              "y": 938
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 96,
+              "y": 1020
+            },
+            {
+              "x": 1728,
+              "y": 3207
+            },
+            {
+              "x": 2913,
+              "y": 2288
+            },
+            {
+              "x": 1300,
+              "y": 147
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:04:15.000Z",
+    "Updated At": "2019-10-12T20:04:15.000Z",
+    "Seconds to Label": 68.067,
+    "External ID": "20191012_180355.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzn6sc1ql00721jdcmnham"
+  },
+  {
+    "ID": "ck1nznuzw1qof0721xj2ruidj",
+    "DataRow ID": "ck1nsqvxkt6mm0er09r746ma6",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F12e9af80-94f2-6162-72b3-c2a09e7a9dc9-20191012_180406.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=qu-G5GexhGs8ZKB3jmdDK8xrkvo",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 797,
+              "y": 1955
+            },
+            {
+              "x": 1387,
+              "y": 2624
+            },
+            {
+              "x": 2244,
+              "y": 1888
+            },
+            {
+              "x": 1672,
+              "y": 1243
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 10,
+              "y": 1064
+            },
+            {
+              "x": 2413,
+              "y": 4028
+            },
+            {
+              "x": 3024,
+              "y": 2571
+            },
+            {
+              "x": 916,
+              "y": 404
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:04:46.000Z",
+    "Updated At": "2019-10-12T20:04:46.000Z",
+    "Seconds to Label": 24.492,
+    "External ID": "20191012_180406.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nznuzw1qof0721xj2ruidj"
+  },
+  {
+    "ID": "ck1nzps53sb020748e6iemm8k",
+    "DataRow ID": "ck1nsqvxkt6my0er09ovt8xzd",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F21588ca6-fd32-563f-4f92-82c18563f6b8-20191012_180135.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=ZKAiOwhBOSUHXyXK5VLICOElBMM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 2167,
+              "y": 1248
+            },
+            {
+              "x": 1605,
+              "y": 1457
+            },
+            {
+              "x": 1934,
+              "y": 2222
+            },
+            {
+              "x": 2484,
+              "y": 2010
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 2460,
+              "y": 1079
+            },
+            {
+              "x": 172,
+              "y": 1927
+            },
+            {
+              "x": 530,
+              "y": 2820
+            },
+            {
+              "x": 2830,
+              "y": 1868
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:06:16.000Z",
+    "Updated At": "2019-10-12T20:19:28.000Z",
+    "Seconds to Label": 88.801,
+    "External ID": "20191012_180135.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzps53sb020748e6iemm8k"
+  },
+  {
+    "ID": "ck1nzpuop0n4k0944qg80b6i1",
+    "DataRow ID": "ck1nsqvxlt6na0er061d84qqu",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fd2bd242b-540d-46f7-0814-12883630822d-20191012_180149.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=IfAOyaYkTk6EKcRvYiQ3pnV87Xo",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:06:19.000Z",
+    "Updated At": "2019-10-12T20:06:19.000Z",
+    "Seconds to Label": 2.997,
+    "External ID": "20191012_180149.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzpuop0n4k0944qg80b6i1"
+  },
+  {
+    "ID": "ck1nzq9n81qy007214lm6pkde",
+    "DataRow ID": "ck1nsqvxht6k20er0fn8uhem9",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fa577ec4e-d18a-0d17-bf59-5a4310d959df-20191012_180225.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=HDhvZwwbBMbxBKxbtK-cGUKrZJk",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 721,
+              "y": 1391
+            },
+            {
+              "x": 627,
+              "y": 2651
+            },
+            {
+              "x": 2118,
+              "y": 2658
+            },
+            {
+              "x": 2024,
+              "y": 1378
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 702,
+              "y": 149
+            },
+            {
+              "x": 522,
+              "y": 4031
+            },
+            {
+              "x": 2254,
+              "y": 4031
+            },
+            {
+              "x": 2180,
+              "y": 179
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:06:38.000Z",
+    "Updated At": "2019-10-12T20:06:38.000Z",
+    "Seconds to Label": 18.977,
+    "External ID": "20191012_180225.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzq9n81qy007214lm6pkde"
+  },
+  {
+    "ID": "ck1nzs7q10nfa09440sm6ae7q",
+    "DataRow ID": "ck1nsqvxlt6nm0er0a04905g8",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fc14073d5-a768-a097-e7f7-79af68ad3c62-20191012_180201.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=26GojWe7en7Xgh9hjxFbPUEiVzM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 583,
+              "y": 1584
+            },
+            {
+              "x": 716,
+              "y": 1863
+            },
+            {
+              "x": 1618,
+              "y": 1406
+            },
+            {
+              "x": 1485,
+              "y": 1138
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 384,
+              "y": 1243
+            },
+            {
+              "x": 1448,
+              "y": 3541
+            },
+            {
+              "x": 2437,
+              "y": 3005
+            },
+            {
+              "x": 1303,
+              "y": 759
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:08:09.000Z",
+    "Updated At": "2019-10-12T20:08:09.000Z",
+    "Seconds to Label": 90.352,
+    "External ID": "20191012_180201.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzs7q10nfa09440sm6ae7q"
+  },
+  {
+    "ID": "ck1nzt3aumwv40725i3deke9k",
+    "DataRow ID": "ck1nsqvxht6ke0er09b11cshy",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F1cbf3a77-4e34-79ce-0d70-4f1cfad6d3fb-20191012_180247.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=5pX-OaSjsFNS21eiI1BHSevwqOU",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 981,
+              "y": 860
+            },
+            {
+              "x": 981,
+              "y": 924
+            },
+            {
+              "x": 1781,
+              "y": 939
+            },
+            {
+              "x": 1782,
+              "y": 867
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 910,
+              "y": 149
+            },
+            {
+              "x": 848,
+              "y": 3450
+            },
+            {
+              "x": 1793,
+              "y": 3103
+            },
+            {
+              "x": 1810,
+              "y": 185
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:08:50.000Z",
+    "Updated At": "2019-10-12T20:08:50.000Z",
+    "Seconds to Label": 32.665,
+    "External ID": "20191012_180247.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzt3aumwv40725i3deke9k"
+  },
+  {
+    "ID": "ck1nzu29nfeld08118lapavda",
+    "DataRow ID": "ck1nsqvxlt6ny0er0duap5keo",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F77f2300a-77ad-cd59-d047-6388f487bca7-20191012_180215.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=k_PYpJVovaG7EwHxRzJeITbrqQI",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 250,
+              "y": 1020
+            },
+            {
+              "x": 1738,
+              "y": 3353
+            },
+            {
+              "x": 3009,
+              "y": 2563
+            },
+            {
+              "x": 1417,
+              "y": 286
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 11,
+              "y": 665
+            },
+            {
+              "x": 2081,
+              "y": 4030
+            },
+            {
+              "x": 3023,
+              "y": 2546
+            },
+            {
+              "x": 1341,
+              "y": 11
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:09:35.000Z",
+    "Updated At": "2019-10-12T20:09:35.000Z",
+    "Seconds to Label": 44.735,
+    "External ID": "20191012_180215.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzu29nfeld08118lapavda"
+  },
+  {
     "ID": "ck1nzv0o50nqf0944b7bw46aq",
     "DataRow ID": "ck1nsqvxht6kq0er0exem0ma1",
     "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F520cefd6-e443-44f4-8ade-2f7e3b724306-20191012_180255.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=eykBsI6vxo58_hYy5XTvTseff_M",
@@ -62,5 +1769,792 @@
     "Dataset Name": "receipts_rotated_good",
     "Reviews": [],
     "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzv0o50nqf0944b7bw46aq"
+  },
+  {
+    "ID": "ck1nzvwofun5c0794iyi0uiik",
+    "DataRow ID": "ck1nsqvxit6l20er08uyj544w",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fff91f37a-a1b2-e176-a8a8-16b88c5f0168-20191012_180259.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=EXbO0uzs5cQq_GoMMfsCYfhG-dc",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1461,
+              "y": 1216
+            },
+            {
+              "x": 1228,
+              "y": 1426
+            },
+            {
+              "x": 2038,
+              "y": 2253
+            },
+            {
+              "x": 2242,
+              "y": 2029
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 2172,
+              "y": 488
+            },
+            {
+              "x": 10,
+              "y": 2379
+            },
+            {
+              "x": 320,
+              "y": 4032
+            },
+            {
+              "x": 3009,
+              "y": 1433
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:11:02.000Z",
+    "Updated At": "2019-10-12T20:11:02.000Z",
+    "Seconds to Label": 41.027,
+    "External ID": "20191012_180259.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzvwofun5c0794iyi0uiik"
+  },
+  {
+    "ID": "ck1nzvzv70nvg094469gsljq4",
+    "DataRow ID": "ck1nsqvxit6le0er0e7a789up",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fda1c9df2-073d-3303-9892-82fb2525147c-20191012_180324.jpg?Expires=1572121244095&KeyName=labelbox-assets-key-1&Signature=AS0UQWPrDfglWPyd32ejXtafjS0",
+    "Label": "Skip",
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:11:06.000Z",
+    "Updated At": "2019-10-12T20:11:06.000Z",
+    "Seconds to Label": 3.818,
+    "External ID": "20191012_180324.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzvzv70nvg094469gsljq4"
+  },
+  {
+    "ID": "ck1nzx3ayfezh0811ge5kr8bf",
+    "DataRow ID": "ck1nsqvxjt6lq0er008sh0ntq",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fe816ac34-f58c-f9b7-66b8-462844772df6-20191012_180335.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=VA2IcJz6IFsa-PmglflD2aw8AFA",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 551,
+              "y": 1190
+            },
+            {
+              "x": 1138,
+              "y": 2707
+            },
+            {
+              "x": 2309,
+              "y": 2231
+            },
+            {
+              "x": 1696,
+              "y": 776
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 305,
+              "y": 635
+            },
+            {
+              "x": 1610,
+              "y": 4028
+            },
+            {
+              "x": 3024,
+              "y": 4028
+            },
+            {
+              "x": 1507,
+              "y": 231
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:11:57.000Z",
+    "Updated At": "2019-10-12T20:11:57.000Z",
+    "Seconds to Label": 50.461,
+    "External ID": "20191012_180335.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzx3ayfezh0811ge5kr8bf"
+  },
+  {
+    "ID": "ck1nzxw8j1rt80721kh6n898m",
+    "DataRow ID": "ck1nsqvxjt6m20er0dy0c81l7",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F60194535-1da1-3758-666e-65d8885992fd-20191012_180345.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=Dnnva3aqU4AF9w5huap-V-pzSfE",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 630,
+              "y": 2214
+            },
+            {
+              "x": 776,
+              "y": 2420
+            },
+            {
+              "x": 1813,
+              "y": 1786
+            },
+            {
+              "x": 1689,
+              "y": 1567
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 0,
+              "y": 1527
+            },
+            {
+              "x": 1369,
+              "y": 4032
+            },
+            {
+              "x": 2822,
+              "y": 3447
+            },
+            {
+              "x": 1310,
+              "y": 616
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:12:34.000Z",
+    "Updated At": "2019-10-12T20:12:34.000Z",
+    "Seconds to Label": 37.015,
+    "External ID": "20191012_180345.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzxw8j1rt80721kh6n898m"
+  },
+  {
+    "ID": "ck1nzyt7qsbza07483lescrv1",
+    "DataRow ID": "ck1nsqvxjt6me0er04ejb13t4",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Ff1d37be0-0bd6-6dc2-ae77-9f87807f3ded-20191012_180356.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=Kp4BQSrhqcbAspGmWIU5cUGnB8o",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1346,
+              "y": 1047
+            },
+            {
+              "x": 1208,
+              "y": 1125
+            },
+            {
+              "x": 1795,
+              "y": 2066
+            },
+            {
+              "x": 1908,
+              "y": 1999
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 2004,
+              "y": 463
+            },
+            {
+              "x": 44,
+              "y": 1536
+            },
+            {
+              "x": 749,
+              "y": 2871
+            },
+            {
+              "x": 2773,
+              "y": 1729
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:13:17.000Z",
+    "Updated At": "2019-10-12T20:13:17.000Z",
+    "Seconds to Label": 42.298,
+    "External ID": "20191012_180356.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzyt7qsbza07483lescrv1"
+  },
+  {
+    "ID": "ck1nzzfd3mxl90725blxwtpr4",
+    "DataRow ID": "ck1nsqvxkt6mq0er0dmqp14c1",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fd47090f1-f37d-a78a-d88a-0d4dd4ed40b8-20191012_180129.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=Y1gDhaV0qfZLum-uWwWa4lCGiOM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 979,
+              "y": 949
+            },
+            {
+              "x": 944,
+              "y": 1762
+            },
+            {
+              "x": 2111,
+              "y": 1767
+            },
+            {
+              "x": 2102,
+              "y": 942
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 929,
+              "y": 470
+            },
+            {
+              "x": 881,
+              "y": 3779
+            },
+            {
+              "x": 2116,
+              "y": 3800
+            },
+            {
+              "x": 2116,
+              "y": 412
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:13:46.000Z",
+    "Updated At": "2019-10-12T20:13:46.000Z",
+    "Seconds to Label": 28.276,
+    "External ID": "20191012_180129.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1nzzfd3mxl90725blxwtpr4"
+  },
+  {
+    "ID": "ck1o00fmysc5f0748nz5ct7mt",
+    "DataRow ID": "ck1nsqvxkt6n20er0hhn6ccta",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fc8047044-7c24-dadd-f7a3-d012e1e27249-20191012_180138.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=k9jvqMx8MzwCpP-UEyD3o94WddM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 2061,
+              "y": 1463
+            },
+            {
+              "x": 1566,
+              "y": 1448
+            },
+            {
+              "x": 1541,
+              "y": 2087
+            },
+            {
+              "x": 2040,
+              "y": 2103
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 2332,
+              "y": 1432
+            },
+            {
+              "x": 467,
+              "y": 1372
+            },
+            {
+              "x": 377,
+              "y": 2024
+            },
+            {
+              "x": 2362,
+              "y": 2109
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:14:33.000Z",
+    "Updated At": "2019-10-12T20:14:33.000Z",
+    "Seconds to Label": 46.571,
+    "External ID": "20191012_180138.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o00fmysc5f0748nz5ct7mt"
+  },
+  {
+    "ID": "ck1o010pn0odh0944ht1me14c",
+    "DataRow ID": "ck1nsqvxlt6ne0er0eqob6ym9",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fdf02e729-1396-7383-b33b-c2fa68eecb62-20191012_180156.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=fA0lp4DhjqqAjXdkIwZZkps93H0",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 795,
+              "y": 1020
+            },
+            {
+              "x": 791,
+              "y": 1434
+            },
+            {
+              "x": 2133,
+              "y": 1391
+            },
+            {
+              "x": 2114,
+              "y": 992
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 749,
+              "y": 497
+            },
+            {
+              "x": 813,
+              "y": 3624
+            },
+            {
+              "x": 2191,
+              "y": 3674
+            },
+            {
+              "x": 2103,
+              "y": 424
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:15:00.000Z",
+    "Updated At": "2019-10-12T20:15:00.000Z",
+    "Seconds to Label": 26.871,
+    "External ID": "20191012_180156.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o010pn0odh0944ht1me14c"
+  },
+  {
+    "ID": "ck1o01p0hmxtx0725ac6myc29",
+    "DataRow ID": "ck1nsqvxht6k60er0ba2d6pex",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2Fb6242985-7ed1-cee5-5f00-6847a00aa2e1-20191012_180226.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=Zb--Ido7j3XpX31vVZjhgtzJrVM",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1039,
+              "y": 1093
+            },
+            {
+              "x": 30,
+              "y": 2093
+            },
+            {
+              "x": 1231,
+              "y": 3137
+            },
+            {
+              "x": 2182,
+              "y": 2014
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1895,
+              "y": 57
+            },
+            {
+              "x": 0,
+              "y": 1986
+            },
+            {
+              "x": 628,
+              "y": 4022
+            },
+            {
+              "x": 3024,
+              "y": 1211
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:15:32.000Z",
+    "Updated At": "2019-10-12T20:15:32.000Z",
+    "Seconds to Label": 31.025,
+    "External ID": "20191012_180226.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o01p0hmxtx0725ac6myc29"
+  },
+  {
+    "ID": "ck1o027rm3b710757or0441xg",
+    "DataRow ID": "ck1nsqvxlt6nq0er061lffbf8",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F7f0cfc3c-858e-dfd9-62b0-d4338060ee38-20191012_180209.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=gnIORz2ew8IdPR585w3apSJQNd4",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1075,
+              "y": 919
+            },
+            {
+              "x": 1082,
+              "y": 2146
+            },
+            {
+              "x": 1709,
+              "y": 2130
+            },
+            {
+              "x": 1689,
+              "y": 926
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1049,
+              "y": 163
+            },
+            {
+              "x": 1088,
+              "y": 3703
+            },
+            {
+              "x": 1802,
+              "y": 3698
+            },
+            {
+              "x": 1719,
+              "y": 192
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:15:56.000Z",
+    "Updated At": "2019-10-12T20:15:56.000Z",
+    "Seconds to Label": 23.748,
+    "External ID": "20191012_180209.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o027rm3b710757or0441xg"
+  },
+  {
+    "ID": "ck1o02ptovurg0838hrnjzrm7",
+    "DataRow ID": "ck1nsqvxht6ki0er042ktcu03",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F65264c97-e371-e7f4-58b3-3f1a58c28c4e-20191012_180248.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=7TuokVyROL6VjuDMmLDmofIcWNs",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 835,
+              "y": 1207
+            },
+            {
+              "x": 870,
+              "y": 1284
+            },
+            {
+              "x": 1705,
+              "y": 955
+            },
+            {
+              "x": 1672,
+              "y": 876
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 473,
+              "y": 497
+            },
+            {
+              "x": 1733,
+              "y": 4032
+            },
+            {
+              "x": 2654,
+              "y": 3304
+            },
+            {
+              "x": 1458,
+              "y": 108
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:16:19.000Z",
+    "Updated At": "2019-10-12T20:16:19.000Z",
+    "Seconds to Label": 22.982,
+    "External ID": "20191012_180248.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o02ptovurg0838hrnjzrm7"
+  },
+  {
+    "ID": "ck1o03co41sdh07217egvzntp",
+    "DataRow ID": "ck1nsqvxlt6o20er08ijy57ps",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F269609d2-a339-bd8b-2a39-a92649b1c0e0-20191012_180217.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=LiOMliuwQ67EE7nskF25mMB0S7I",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 1061,
+              "y": 1130
+            },
+            {
+              "x": 1106,
+              "y": 2592
+            },
+            {
+              "x": 1846,
+              "y": 2562
+            },
+            {
+              "x": 1777,
+              "y": 1102
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 1010,
+              "y": 256
+            },
+            {
+              "x": 1123,
+              "y": 4032
+            },
+            {
+              "x": 1999,
+              "y": 4028
+            },
+            {
+              "x": 1788,
+              "y": 231
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:16:49.000Z",
+    "Updated At": "2019-10-12T20:16:49.000Z",
+    "Seconds to Label": 29.133,
+    "External ID": "20191012_180217.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o03co41sdh07217egvzntp"
+  },
+  {
+    "ID": "ck1o03tfm3bez0757eb06isr1",
+    "DataRow ID": "ck1nsqvxht6ku0er0ha63d32z",
+    "Labeled Data": "https://storage.labelbox.com/ck1hycpc6lpds0721mjgcfy5e%2F81551ad5-3d96-89a9-e7fa-82882108f473-20191012_180256.jpg?Expires=1572121244096&KeyName=labelbox-assets-key-1&Signature=po-FgPUrbdIfdKD2H42zVW7vhCQ",
+    "Label": {
+      "important": [
+        {
+          "geometry": [
+            {
+              "x": 716,
+              "y": 1978
+            },
+            {
+              "x": 847,
+              "y": 2302
+            },
+            {
+              "x": 2101,
+              "y": 1790
+            },
+            {
+              "x": 1946,
+              "y": 1468
+            }
+          ]
+        }
+      ],
+      "bill": [
+        {
+          "geometry": [
+            {
+              "x": 223,
+              "y": 905
+            },
+            {
+              "x": 1456,
+              "y": 4025
+            },
+            {
+              "x": 3016,
+              "y": 3712
+            },
+            {
+              "x": 1588,
+              "y": 383
+            }
+          ]
+        }
+      ]
+    },
+    "Created By": "filipcoja@gmail.com",
+    "Project Name": "receipts",
+    "Created At": "2019-10-12T20:17:11.000Z",
+    "Updated At": "2019-10-12T20:17:11.000Z",
+    "Seconds to Label": 21.014,
+    "External ID": "20191012_180256.jpg",
+    "Agreement": null,
+    "Benchmark Agreement": null,
+    "Benchmark ID": null,
+    "Benchmark Reference ID": null,
+    "Dataset Name": "receipts_rotated_good",
+    "Reviews": [],
+    "View Label": "https://image-segmentation-v4.labelbox.com?project=ck1i03q22fjxj079439kf6zux&label=ck1o03tfm3bez0757eb06isr1"
   }
 ]
