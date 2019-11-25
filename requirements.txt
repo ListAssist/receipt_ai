@@ -1,3 +1,4 @@
+imgaug
 pytesseract
 flask
 absl-py==0.8.1
