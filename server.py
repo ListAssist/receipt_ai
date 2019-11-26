@@ -5,7 +5,7 @@ from flask_cors import CORS
 import cv2
 from pytesseract import Output
 import matplotlib.patches as patches
-from preprocessing import four_point_transform
+from preprocessing import four_point_transform, edge_detection
 import json
 import pytesseract
 import matplotlib.pyplot as plt
@@ -47,17 +47,16 @@ if __name__ == "__main__":
 
         draw_boxes(lines, gray_img)
         return jsonify(tesseract_to_json(lines))
-    
+
     @app.route("/prediction", methods=["POST"])
     def prediction():
         # Decode image which was send from flutter with multipart form data
         img = getImageFromRequest()
 
         # four point transformation on the picture with the give coordinates
-        cropped_img = four_point_transform(transform_to_1d(coordinates), img)
-        resized_img = cv2.resize(cropped_img, None, fx=2, fy=2)
-        gray_img = cv2.cvtColor(resized_img, cv2.COLOR_RGB2GRAY)
-        gray_img = cv2.medianBlur(gray_img, 3)
+        gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+        ret, b_w_image = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        cropped_img, points = edge_detection(b_w_image)
 
         # https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_thresholding.html
         # https://www.freecodecamp.org/news/getting-started-with-tesseract-part-ii-f7f9a0899b3f/

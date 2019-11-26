@@ -138,16 +138,20 @@ def edge_detection(image):
         # bbox = cv2.minAreaRect(contour)
         # approximation = np.array(cv2.boxPoints(bbox))
         if len(approximation) == 4:
+            # reshape approximation for better coding experience
             approximation = np.array(approximation).reshape((4, 2))
+            # order points to tl, bl, br, tr
+            points = order_points(approximation)
+            cropped_img = four_point_transform(points.flatten(), image);
 
+            # show image
             cv2.namedWindow("main", cv2.WINDOW_NORMAL)
             cv2.resizeWindow("main", 600, 600)
-            cv2.imshow("main", four_point_transform(order_points(approximation).flatten(), image))
-            cv2.waitKey(0)
             cv2.imshow("main", image)
             cv2.waitKey(0)
-
-            break
+            cv2.imshow("main", cropped_img)
+            cv2.waitKey(0)
+            return cropped_img, points
 
 
 if __name__ == "__main__":
