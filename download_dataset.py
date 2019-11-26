@@ -6,7 +6,7 @@ import urllib.request
 BILL_IMG_DIR = "bills"
 FULL_PATH = os.path.join(os.getcwd(), BILL_IMG_DIR)
 
-with open("all_labels.json", "r") as export_file:
+with open("exports/training_data_full.json", "r") as export_file:
     data = json.load(export_file)
     data = [label for label in data if label["Label"] != "Skip"]
     for label in data:
