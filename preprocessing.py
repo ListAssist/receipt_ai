@@ -88,7 +88,7 @@ def four_point_transform(points, image):
         [max_width, max_height],
         [max_width, 0]], dtype="float32")
     M = cv2.getPerspectiveTransform(np.array((top_left, bottom_left, bottom_right, top_right), dtype="float32"), dst)
-    return cv2.warpPerspective(image, M, (max_width, max_height))
+    return cv2.warpPerspective(image, M, (max_width, max_height)), (top_left, max_width, max_height)
 
 
 # https://github.com/jrosebr1/imutils/blob/master/imutils/perspective.py
@@ -142,7 +142,7 @@ def edge_detection(image):
             approximation = np.array(approximation).reshape((4, 2))
             # order points to tl, bl, br, tr
             points = order_points(approximation)
-            cropped_img = four_point_transform(points.flatten(), image);
+            cropped_img, points = four_point_transform(points.flatten(), image)
 
             # show image
             cv2.namedWindow("main", cv2.WINDOW_NORMAL)

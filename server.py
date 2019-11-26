@@ -58,13 +58,14 @@ if __name__ == "__main__":
         ret, b_w_image = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         cropped_img, points = edge_detection(b_w_image)
 
+        # get gray image which was cropped for tesseract
+        cropped_gray_img = img[points[0][1]:points[0][1]+points[2], points[0][0]:points[0][1]+points[1]]
+
         # https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_thresholding.html
         # https://www.freecodecamp.org/news/getting-started-with-tesseract-part-ii-f7f9a0899b3f/
 
         # get text from tesseract ocr engine
-        lines = pytesseract.image_to_data(gray_img, lang="deu", output_type=Output.DICT)
-        boxes_and_text = []
-
+        lines = pytesseract.image_to_data(cropped_gray_img, lang="deu", output_type=Output.DICT)
         draw_boxes(lines, gray_img)
         return jsonify(tesseract_to_json(lines))
 
