@@ -77,6 +77,7 @@ def prediction():
 
     # four point transformation on the picture with the give coordinates
     gray_img = cv2.cvtColor(color_img, cv2.COLOR_RGB2GRAY)
+    gray_img_resized = cv2.resize(gray_img, dsize=(W, H))
 
     blob = cv2.dnn.blobFromImage(img, scalefactor=1, size=(W, H), mean=(104.00698793, 116.66876762, 122.67891434), swapRB=False, crop=False)
 
@@ -87,7 +88,8 @@ def prediction():
     # HED vs OTSU => keine Chance
     # ret, b_w_image_alg = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-    ret, b_w_image = cv2.threshold(b_w_image_nn, 80, 255, cv2.THRESH_BINARY)
+    # ret, b_w_image = cv2.threshold(b_w_image_nn, 50, 255, cv2.THRESH_BINARY)
+    ret, b_w_image = cv2.threshold(gray_img_resized, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     plt.imshow(b_w_image, cmap="gray")
     plt.show()
 

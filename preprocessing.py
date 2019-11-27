@@ -140,7 +140,7 @@ def edge_detection(b_w_image, type='approx'):
 
     for contour in contours:
         if cv2.contourArea(contour) < min_area:
-            print("")
+            break
 
         if type == 'approx':
             peri = cv2.arcLength(contour, True)
