@@ -5,15 +5,23 @@ from flask import Flask, request
 import cv2
 from pytesseract import Output
 import matplotlib.patches as patches
-from preprocessing import four_point_transform, edge_detection, order_points
+
+from HED import CropLayer
+from preprocessing import four_point_transform, edge_detection, order_points, transform_vertices
 import json
 import pytesseract
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 app = Flask(__name__)
 
+net = cv2.dnn.readNetFromCaffe("model/deploy.prototxt", "model/hed_pretrained_bsds.caffemodel")
+cv2.dnn_registerLayer('Crop', CropLayer)
 
-@app.route("/detect")
+
+print("executed")
+
+
+@app.route("/detect", methods=["POST"])
 def detect():
     # retrieve image
     img = get_image_from_request()
@@ -59,10 +67,29 @@ def prediction():
     """
 
     # Decode image which was send from flutter with multipart form data
-    img = get_image_from_request()
+    color_img = get_image_from_request()
+    W = 750
+    H = 1000
+
+    RATIO_X = color_img.shape[1] / W
+    RATIO_Y = color_img.shape[0] / H
+    img = cv2.resize(src=color_img, dsize=(W, H))
+
     # four point transformation on the picture with the give coordinates
-    gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    ret, b_w_image = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    gray_img = cv2.cvtColor(color_img, cv2.COLOR_RGB2GRAY)
+
+    blob = cv2.dnn.blobFromImage(img, scalefactor=1, size=(W, H), mean=(104.00698793, 116.66876762, 122.67891434), swapRB=False, crop=False)
+
+    net.setInput(blob)
+    hed = net.forward()
+    hed = cv2.resize(hed[0, 0], (W, H))
+    b_w_image_nn = (255 * hed).astype("uint8")
+    # HED vs OTSU => keine Chance
+    # ret, b_w_image_alg = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    ret, b_w_image = cv2.threshold(b_w_image_nn, 80, 255, cv2.THRESH_BINARY)
+    plt.imshow(b_w_image, cmap="gray")
+    plt.show()
 
     # detect bill and use both approaches
     points = edge_detection(b_w_image, type="approx")
@@ -73,7 +100,7 @@ def prediction():
     if points is None:
         cropped_gray_img = gray_img
     else:
-        cropped_gray_img = four_point_transform(points.flatten(), gray_img)
+        cropped_gray_img = four_point_transform(transform_vertices(points.flatten(), (RATIO_X, RATIO_Y)), gray_img)
 
     cv2.namedWindow("otsu_result", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("otsu_result", 600, 600)
@@ -121,14 +148,14 @@ def detect_lines(gray_img):
     # test thresholds to see which one is fit the best
     # fig, ax = try_all_threshold(gray_img, figsize=(10, 8), verbose=False)
     # plt.show()
-    b_w_edges = cv2.Canny(gray_img, 50, 200)
+    blur = cv2.GaussianBlur(gray_img, (5, 5), 0)
+    b_w_edges = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
 
+    plt.imshow(b_w_edges, cmap="gray")
+    plt.show()
     # Detect points that form a line
     # threshold = how many points until it is recognized as line
     lines = cv2.HoughLinesP(b_w_edges, 1, np.pi / 180, threshold=200, minLineLength=10, maxLineGap=250)
-    # Draw lines on the image
-    if lines is None or len(lines) < 2:
-        return
 
     bounding_lines = []
     for line in lines:
@@ -144,14 +171,17 @@ def detect_lines(gray_img):
         # get angle to check if it can go through as a horizontal line
         angle = atan(abs(y2 - y1) / x_diff) * 180.0 / np.pi
 
-        if abs(angle) < 10:
+        if abs(angle) < 20:
             # add line to array with coords
             # [(x1, y1),(x2, y2)]
             # [(x1, y1), (x2, y2)]
             avg_y = (y1 + y2) / 2
             bounding_lines.append(((x1, y1, x2, y2), avg_y))
+            plt.plot((x1, x2), (y1, y2), "r")
 
-            plt.plot((x1, x2), (y1, y2), "k-")
+    if len(bounding_lines) < 2:
+        return
+
     # (x1, y1, x2, y2) | avg_y
     bounding_lines = sorted(bounding_lines, key=lambda line_props: line_props[1], reverse=False)[:2]
 

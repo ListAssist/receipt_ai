@@ -13,6 +13,8 @@ import imgaug.augmenters as iaa
 import imgaug as ia
 from scipy.spatial.distance import cdist
 
+from HED import CropLayer
+
 sometimes = lambda aug: iaa.Sometimes(0.5, aug)
 
 # if true will print plots and information about preprocessing
@@ -120,7 +122,7 @@ def order_points(pts):
 # Only works on well photographed pictures of receipts
 def edge_detection(b_w_image, type='approx'):
     # find contours
-    contours = cv2.findContours(b_w_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+    contours = cv2.findContours(b_w_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contours = imutils.grab_contours(contours)
     contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
 
@@ -138,7 +140,7 @@ def edge_detection(b_w_image, type='approx'):
 
     for contour in contours:
         if cv2.contourArea(contour) < min_area:
-            break
+            print("")
 
         if type == 'approx':
             peri = cv2.arcLength(contour, True)
@@ -147,10 +149,10 @@ def edge_detection(b_w_image, type='approx'):
             bbox = cv2.minAreaRect(contour)
             approximation = np.array(cv2.boxPoints(bbox))
 
-        for p in np.array(approximation).reshape(len(approximation), 2):
-            plt.scatter(p[0], p[1])
-        plt.imshow(b_w_image, cmap="gray")
-        plt.show()
+        color = cv2.cvtColor(b_w_image, cv2.COLOR_GRAY2RGB)
+        cv2.drawContours(color, [contour], -1, (255, 0, 0), 5)
+        cv2.imshow("Image from contour detection", color)
+        cv2.waitKey(0)
 
         if len(approximation) == 4:
             # reshape approximation for better coding experience
@@ -169,10 +171,6 @@ def edge_detection(b_w_image, type='approx'):
                         point[1] = 0
                     elif point[1] > res_y:
                         point[1] = res_y
-            color = cv2.cvtColor(b_w_image, cv2.COLOR_GRAY2RGB)
-            cv2.drawContours(color, [contour], -1, (255, 0, 0), 5)
-            cv2.imshow("Image from contour detection", color)
-            cv2.waitKey(0)
             return points
 
 
