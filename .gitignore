@@ -4,9 +4,11 @@
 bills/*
 !bills/.gitkeep
 
+
 model/*
 !model/.gitkeep
-
+!model/deploy.prototxt
+!model/hed_pretrained_bsds.caffemodel
 
 
 
