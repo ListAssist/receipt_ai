@@ -13,6 +13,20 @@ import matplotlib.lines as mlines
 app = Flask(__name__)
 
 
+@app.route("/detect")
+def detect():
+    # retrieve image
+    img = get_image_from_request()
+
+    gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+    # get text from tesseract ocr engine
+    detected_string = pytesseract.image_to_string(gray_img, lang="deu", config="--psm 6")
+    lines = pytesseract.image_to_data(gray_img, lang="deu", config="--psm 6", output_type=Output.DICT)
+
+    return jsonify(tesseract_to_json(lines, detected_string))
+
+
 @app.route("/trainable", methods=["POST"])
 def trainable():
     # retrieve parameters (in this case coordinates) from request
@@ -21,7 +35,7 @@ def trainable():
     # Decode image which was send from flutter with multipart form data
     img = get_image_from_request()
     # four point transformation on the picture with the give coordinates
-    cropped_img, _ = four_point_transform(transform_to_1d(coordinates), img)
+    cropped_img = four_point_transform(transform_to_1d(coordinates), img)
     resized_img = cv2.resize(cropped_img, None, fx=2, fy=2)
     gray_img = cv2.cvtColor(resized_img, cv2.COLOR_RGB2GRAY)
     gray_img = cv2.medianBlur(gray_img, 3)
@@ -30,11 +44,12 @@ def trainable():
     # https://www.freecodecamp.org/news/getting-started-with-tesseract-part-ii-f7f9a0899b3f/
 
     # get text from tesseract ocr engine
+    detected_string = pytesseract.image_to_string(gray_img, lang="deu", config="--psm 6")
     lines = pytesseract.image_to_data(gray_img, lang="deu", config="--psm 6",  output_type=Output.DICT)
     boxes_and_text = []
 
     draw_boxes(lines, gray_img)
-    return jsonify(tesseract_to_json(lines))
+    return jsonify(tesseract_to_json(lines, detected_string))
 
 
 @app.route("/prediction", methods=["POST"])
@@ -52,14 +67,12 @@ def prediction():
     # detect bill and use both approaches
     points = edge_detection(b_w_image, type="approx")
     if points is None:
-        print("bbox executed")
         points = edge_detection(b_w_image, type="bbox")
 
     # get gray image which was cropped for tesseract
     if points is None:
         cropped_gray_img = gray_img
     else:
-        print(points.flatten())
         cropped_gray_img = four_point_transform(points.flatten(), gray_img)
 
     cv2.namedWindow("otsu_result", cv2.WINDOW_NORMAL)
@@ -85,7 +98,7 @@ def prediction():
         if rect_points is not None:
             important_area = cropped_gray_img
             tesseract_output = pytesseract.image_to_string(important_area, lang="deu", config="--psm 6")
-            print(tesseract_output)
+
             # if the whole image is not helpful, error
             if tesseract_output is None:
                 return jsonify({"error": "no text detected"}), 400
@@ -93,7 +106,7 @@ def prediction():
             # There is text to be returned
             lines = pytesseract.image_to_data(important_area, lang="deu", config="--psm 6", output_type=Output.DICT)
             draw_boxes(lines, important_area)
-            return jsonify(tesseract_to_json(lines)), 200
+            return jsonify(tesseract_to_json(lines, tesseract_output)), 200
         else:
             # rect points was really empty and the whole image didn't have any text
             return jsonify({"error": "no text detected"}), 400
@@ -101,14 +114,14 @@ def prediction():
         # rect_points returned good points and text can be returned
         lines = pytesseract.image_to_data(important_area, lang="deu", config="--psm 6", output_type=Output.DICT)
         draw_boxes(lines, important_area)
-        return jsonify(tesseract_to_json(lines)), 200
+        return jsonify(tesseract_to_json(lines, tesseract_output)), 200
 
 
 def detect_lines(gray_img):
     # test thresholds to see which one is fit the best
     # fig, ax = try_all_threshold(gray_img, figsize=(10, 8), verbose=False)
     # plt.show()
-    b_w_edges = cv2.Canny(gray_img, 0, 255)
+    b_w_edges = cv2.Canny(gray_img, 50, 200)
 
     # Detect points that form a line
     # threshold = how many points until it is recognized as line
@@ -131,7 +144,7 @@ def detect_lines(gray_img):
         # get angle to check if it can go through as a horizontal line
         angle = atan(abs(y2 - y1) / x_diff) * 180.0 / np.pi
 
-        if abs(angle) < 5:
+        if abs(angle) < 10:
             # add line to array with coords
             # [(x1, y1),(x2, y2)]
             # [(x1, y1), (x2, y2)]
@@ -169,12 +182,12 @@ def detect_lines(gray_img):
         plt.scatter(point[0], point[1])
 
     plt.imshow(gray_img, cmap="gray")
-    # plt.show()
+    plt.show()
     # Show result
-    # cv2.namedWindow("main", cv2.WINDOW_NORMAL)
-    # cv2.resizeWindow("main", 600, 600)
-    # cv2.imshow("main", gray_img)
-    # cv2.waitKey(0)
+    cv2.namedWindow("b_w_edges", cv2.WINDOW_NORMAL)
+    cv2.resizeWindow("b_w_edges", 600, 600)
+    cv2.imshow("b_w_edges", b_w_edges)
+    cv2.waitKey(0)
 
     return np.array(rect_points)
 
@@ -193,7 +206,7 @@ def draw_boxes(lines: dict, img):
     plt.show()
 
 
-def tesseract_to_json(lines):
+def tesseract_to_json(lines, detected_string):
     detections = []
     for i in range(len(lines["conf"])):
         confidence = float(lines["conf"][i]) if int(lines["conf"][i]) != -1 else 0.0
@@ -205,7 +218,7 @@ def tesseract_to_json(lines):
             "text": lines["text"][i],
             "confidence": confidence / 100
         })
-    return {"detections": detections}
+    return {"detections": detections, "detected_string": detected_string}
 
 
 # creates one dim array from points dictionary

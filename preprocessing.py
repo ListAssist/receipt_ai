@@ -120,13 +120,16 @@ def order_points(pts):
 # Only works on well photographed pictures of receipts
 def edge_detection(b_w_image, type='approx'):
     # find contours
-    contours = cv2.findContours(b_w_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[:5]
+    contours = cv2.findContours(b_w_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
     contours = imutils.grab_contours(contours)
-    contours = sorted(contours, key=cv2.contourArea, reverse=True)
+    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
 
+    print(type)
     if DEBUG:
         cv2.namedWindow("Image from contour detection", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("Image from contour detection", 600, 600)
+        cv2.imshow("Image from contour detection", b_w_image)
+        cv2.waitKey(0)
 
     # calculate a min area for the bill
     res_y = len(b_w_image)
@@ -144,14 +147,28 @@ def edge_detection(b_w_image, type='approx'):
             bbox = cv2.minAreaRect(contour)
             approximation = np.array(cv2.boxPoints(bbox))
 
-        print(len(approximation))
+        for p in np.array(approximation).reshape(len(approximation), 2):
+            plt.scatter(p[0], p[1])
+        plt.imshow(b_w_image, cmap="gray")
+        plt.show()
+
         if len(approximation) == 4:
             # reshape approximation for better coding experience
             approximation = np.array(approximation).reshape((4, 2))
 
             # order points to tl, bl, br, tr
             points = order_points(approximation)
+            if type == "bbox":
+                for point in points:
+                    if point[0] < 0:
+                        point[0] = 0
+                    elif point[0] > res_x:
+                        point[0] = res_x
 
+                    if point[1] < 0:
+                        point[1] = 0
+                    elif point[1] > res_y:
+                        point[1] = res_y
             color = cv2.cvtColor(b_w_image, cv2.COLOR_GRAY2RGB)
             cv2.drawContours(color, [contour], -1, (255, 0, 0), 5)
             cv2.imshow("Image from contour detection", color)
