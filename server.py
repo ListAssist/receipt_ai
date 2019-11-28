@@ -150,6 +150,7 @@ def prediction():
 
 def detect_lines(gray_img):
     # test thresholds to see which one is fit the best
+    contrast = cv2.convertScaleAbs(gray_img, alpha=1.5, beta=0)
     blur = cv2.GaussianBlur(gray_img, (5, 5), 0)
 
     # b_w_edges = cv2.threshold(blur, 0, 255, cv2.THRESH_TRIANGLE)
@@ -178,7 +179,6 @@ def detect_lines(gray_img):
 
         # get angle to check if it can go through as a horizontal line
         angle = atan(abs(y2 - y1) / x_diff) * 180.0 / np.pi
-        plt.plot((x1, x2), (y1, y2), "r")
 
         if abs(angle) < 20:
             # add line to array with coords
@@ -186,6 +186,7 @@ def detect_lines(gray_img):
             # [(x1, y1), (x2, y2)]
             avg_y = (y1 + y2) / 2
             bounding_lines.append(((x1, y1, x2, y2), avg_y))
+            plt.plot((x1, x2), (y1, y2), "r")
 
     if len(bounding_lines) < 2:
         return
