@@ -5,6 +5,8 @@ from flask import Flask, request
 import cv2
 from pytesseract import Output
 import matplotlib.patches as patches
+from skimage import feature
+from skimage.filters import try_all_threshold, threshold_triangle, threshold_yen
 
 from HED import CropLayer
 from preprocessing import four_point_transform, edge_detection, order_points, transform_vertices
@@ -148,16 +150,20 @@ def prediction():
 
 def detect_lines(gray_img):
     # test thresholds to see which one is fit the best
-    # fig, ax = try_all_threshold(gray_img, figsize=(10, 8), verbose=False)
-    # plt.show()
     blur = cv2.GaussianBlur(gray_img, (5, 5), 0)
-    b_w_edges = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+
+    # b_w_edges = cv2.threshold(blur, 0, 255, cv2.THRESH_TRIANGLE)
+    thresh = threshold_yen(blur)
+    b_w = blur > thresh
+
+    b_w_edges = feature.canny(b_w, sigma=1)
+    b_w_edges = (b_w_edges * 255).astype(np.uint8)
 
     plt.imshow(b_w_edges, cmap="gray")
     plt.show()
     # Detect points that form a line
     # threshold = how many points until it is recognized as line
-    lines = cv2.HoughLinesP(b_w_edges, 1, np.pi / 180, threshold=200, minLineLength=10, maxLineGap=250)
+    lines = cv2.HoughLinesP(b_w_edges, 1, np.pi / 180, threshold=150, minLineLength=10, maxLineGap=300)
 
     bounding_lines = []
     for line in lines:
@@ -172,6 +178,7 @@ def detect_lines(gray_img):
 
         # get angle to check if it can go through as a horizontal line
         angle = atan(abs(y2 - y1) / x_diff) * 180.0 / np.pi
+        plt.plot((x1, x2), (y1, y2), "r")
 
         if abs(angle) < 20:
             # add line to array with coords
@@ -179,7 +186,6 @@ def detect_lines(gray_img):
             # [(x1, y1), (x2, y2)]
             avg_y = (y1 + y2) / 2
             bounding_lines.append(((x1, y1, x2, y2), avg_y))
-            plt.plot((x1, x2), (y1, y2), "r")
 
     if len(bounding_lines) < 2:
         return
