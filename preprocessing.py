@@ -130,7 +130,7 @@ def edge_detection(b_w_image, type='approx'):
     if DEBUG:
         cv2.namedWindow("Image from contour detection", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("Image from contour detection", 600, 600)
-        cv2.imshow("Image from contour detection", b_w_image)
+        #cv2.imshow("Image from contour detection", b_w_image)
         cv2.waitKey(0)
 
     # calculate a min area for the bill
@@ -151,7 +151,7 @@ def edge_detection(b_w_image, type='approx'):
 
         color = cv2.cvtColor(b_w_image, cv2.COLOR_GRAY2RGB)
         cv2.drawContours(color, [contour], -1, (255, 0, 0), 5)
-        cv2.imshow("Image from contour detection", color)
+        #cv2.imshow("Image from contour detection", color)
         cv2.waitKey(0)
 
         if len(approximation) == 4:

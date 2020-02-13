@@ -1,1 +1,1 @@
-# Receipt Detection Model for Firebase
+# Receipt Detection and Model Training with Python

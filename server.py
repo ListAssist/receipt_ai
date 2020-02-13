@@ -14,13 +14,12 @@ import json
 import pytesseract
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
+from skimage.morphology import skeletonize
+
 app = Flask(__name__)
 
 net = cv2.dnn.readNetFromCaffe("model/deploy.prototxt", "model/hed_pretrained_bsds.caffemodel")
 cv2.dnn_registerLayer('Crop', CropLayer)
-
-
-print("executed")
 
 
 @app.route("/detect", methods=["POST"])
@@ -44,7 +43,7 @@ def trainable():
 
     # Decode image which was send from flutter with multipart form data
     img = get_image_from_request()
-    # four point transformation on the picture with the give coordinates
+    # four point transformation on the picture with the given coordinates
     cropped_img = four_point_transform(transform_to_1d(coordinates), img)
     resized_img = cv2.resize(cropped_img, None, fx=2, fy=2)
     gray_img = cv2.cvtColor(resized_img, cv2.COLOR_RGB2GRAY)
@@ -56,9 +55,8 @@ def trainable():
     # get text from tesseract ocr engine
     detected_string = pytesseract.image_to_string(gray_img, lang="deu", config="--psm 6")
     lines = pytesseract.image_to_data(gray_img, lang="deu", config="--psm 6",  output_type=Output.DICT)
-    boxes_and_text = []
 
-    draw_boxes(lines, gray_img)
+    # draw_boxes(lines, gray_img)
     return jsonify(tesseract_to_json(lines, detected_string))
 
 
@@ -87,8 +85,29 @@ def prediction():
     hed = net.forward()
     hed = cv2.resize(hed[0, 0], (W, H))
     b_w_image_nn = (255 * hed).astype("uint8")
+
+    # Skeletonizing
+    hed_skeleton = cv2.Canny(b_w_image_nn, 0, 255)
+    hed_skeleton = hed_skeleton / 255
+    hed_skeleton = skeletonize(hed_skeleton)
+    hed_skeleton = hed_skeleton * 255
+
+    lines = cv2.HoughLinesP(hed_skeleton.astype("uint8"), 1, np.pi / 180, threshold=250, minLineLength=10, maxLineGap=200)
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+
+        # add line to array with coords
+        # [(x1, y1),(x2, y2)]
+        # [(x1, y1), (x2, y2)]
+        avg_y = (y1 + y2) / 2
+        plt.plot((x1, x2), (y1, y2), "r")
+
+    plt.imshow(hed_skeleton, cmap="gray")
+    plt.show()
     # HED vs OTSU => keine Chance
     # ret, b_w_image_alg = cv2.threshold(gray_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+
 
     # ret, b_w_image = cv2.threshold(b_w_image_nn, 50, 255, cv2.THRESH_BINARY)
     ret, b_w_image = cv2.threshold(gray_img_resized, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
@@ -108,7 +127,7 @@ def prediction():
 
     cv2.namedWindow("otsu_result", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("otsu_result", 600, 600)
-    cv2.imshow("otsu_result", cropped_gray_img)
+    #cv2.imshow("otsu_result", cropped_gray_img)
     cv2.waitKey(0)
 
     # detect horizontal billa lines
@@ -118,7 +137,7 @@ def prediction():
         important_area = four_point_transform(order_points(rect_points).flatten(), cropped_gray_img)
         cv2.namedWindow("main", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("main", 600, 600)
-        cv2.imshow("main", important_area)
+        #cv2.imshow("main", important_area)
     else:
         important_area = cropped_gray_img
 
@@ -225,7 +244,7 @@ def detect_lines(gray_img):
     # Show result
     cv2.namedWindow("b_w_edges", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("b_w_edges", 600, 600)
-    cv2.imshow("b_w_edges", b_w_edges)
+    #cv2.imshow("b_w_edges", b_w_edges)
     cv2.waitKey(0)
 
     return np.array(rect_points)
@@ -270,7 +289,7 @@ def transform_to_1d(points_as_dict):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="192.168.0.244", debug=True , port=5000)
 
 
 
