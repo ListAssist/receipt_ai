@@ -7,13 +7,13 @@ img = cv2.imread("images/rechnung.jpeg", cv2.IMREAD_GRAYSCALE)
 # simple thresholding
 _, simple = cv2.threshold(img, 181, 255, cv2.THRESH_BINARY)
 # adaptive gauss thresholding (blockSize=11, C=2)
-adaptive_gauss = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+adaptive_gauss = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 10)
 # otsu's method
 _, otsu = cv2.threshold(img, 0, 255, cv2.THRESH_OTSU)
 
 # create mappings
-headlines = ["Grayscale Bild", 'Simple Binary Threshold (T=128)',
-            'Adaptive Gauss Threshold', 'Otsu Threshold']
+headlines = ["Grayscale Bild", 'Global Threshold (T=128)',
+            'Adaptive Gauss Threshold (b=11, C=10)', 'Otsu Threshold']
 images = [img, simple, adaptive_gauss, otsu]
 
 # plot histogramm
@@ -26,3 +26,4 @@ for i in range(len(headlines)):
     plt.title(headlines[i])
 plt.show()
 
+cv2.getGaussianKernel(11, )
