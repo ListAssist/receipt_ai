@@ -26,4 +26,3 @@ for i in range(len(headlines)):
     plt.title(headlines[i])
 plt.show()
 
-cv2.getGaussianKernel(11, )
