@@ -55,6 +55,23 @@ def gen_integral_img(image):
         for row in range(1, height):
             integral[row, col] = image[row, col] + integral[row - 1, col] + integral[row, col - 1] - integral[row - 1, col - 1]
 
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    cols = np.arange(width)
+    rows = np.arange(height)
+    xx, yy = np.meshgrid(cols, rows)
+
+    def kong(x, y):
+        return integral[y,x]
+    z = kong(xx, yy)
+    surface = ax.plot_surface(xx, yy, z, cmap=cm.seismic, antialiased=False)
+    plt.xlabel("Höhe")
+    plt.ylabel("Breite")
+    fig.colorbar(surface, shrink=0.5, aspect=5)
+
+    plt.title("Integral Bild visualisiert")
+    plt.show()
     return integral
 
 
